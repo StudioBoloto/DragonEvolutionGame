@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class DragonMovement : MonoBehaviour
 {
-    public GameObject eggPrefab;
-    public GameObject coinPrefab;
     public float moveSpeed = 5f;
     private GameObject groundObject;
     private float moveRangeX;
@@ -43,17 +41,5 @@ public class DragonMovement : MonoBehaviour
         randomY = Mathf.Clamp(randomY, centerPos.y - moveRangeY, centerPos.y + moveRangeY);
         Vector3 randomPos = new Vector3(randomX, randomY, 0f);
         return randomPos;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("EggSpawn"))
-        {
-            Instantiate(eggPrefab, transform.position, Quaternion.identity);
-        }
-        else if (collision.CompareTag("CoinSpawn"))
-        {
-            Instantiate(coinPrefab, transform.position, Quaternion.identity);
-        }
     }
 }
