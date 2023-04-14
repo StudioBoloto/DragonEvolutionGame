@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 86783914}
   - component: {fileID: 86783917}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,6 +737,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2698264015579369701, guid: 4b95d148b73ce4b558c412b698ad2758, type: 3}
+      propertyPath: multiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8707361497338386813, guid: 4b95d148b73ce4b558c412b698ad2758, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -803,7 +807,7 @@ GameObject:
   - component: {fileID: 862955588}
   - component: {fileID: 862955591}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,7 +1011,7 @@ GameObject:
   - component: {fileID: 910516465}
   - component: {fileID: 910516468}
   m_Layer: 0
-  m_Name: Square (3)
+  m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,7 +1498,7 @@ GameObject:
   - component: {fileID: 1847717098}
   - component: {fileID: 1847717101}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
     private void SpawnEgg()
     {
         GameObject egg = Instantiate(eggPrefab, transform.position, Quaternion.identity);
-        egg.transform.localScale *= (1 + playerController.multiplier / 10);
+        egg.transform.localScale *= (1 + playerController.multiplier / 5);
         StartCoroutine(SpawnDragonCoroutine(egg.transform.position, eggLifeTime));
         Destroy(egg, eggLifeTime);
     }
