@@ -66,7 +66,7 @@ public class Spawner : MonoBehaviour
             GameObject poo = Instantiate(pooPrefab, startPosition, Quaternion.identity);
 
             Rigidbody2D pooRigidbody = poo.GetComponent<Rigidbody2D>();
-            pooRigidbody.AddForce(Vector2.up * Random.Range(1f, 3f), ForceMode2D.Impulse);
+            //pooRigidbody.AddForce(Vector2.up * Random.Range(1f, 3f), ForceMode2D.Impulse);
             pooRigidbody.AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)), ForceMode2D.Impulse);
             Destroy(poo, pooLifeTime);
         }

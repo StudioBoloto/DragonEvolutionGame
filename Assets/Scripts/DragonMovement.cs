@@ -24,11 +24,10 @@ public class DragonMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        if (Vector3.Distance(transform.position, targetPosition) < 0.1f || Vector3.Distance(transform.position, targetPosition) > 4.0f)
         {
             targetPosition = GetRandomPosition();
         }
-
         transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
 
