@@ -8,6 +8,7 @@ public class MoneyResources : MonoBehaviour
 {
     public int Coins { get; private set; }
     [SerializeField] private UICounter _counter;
+    
 
     public event Action<int> OnChangeCoins;
     public event Action<Vector3> OnCollectCoins;
@@ -17,9 +18,16 @@ public class MoneyResources : MonoBehaviour
         OnChangeCoins?.Invoke(Coins);
     }
 
-    public void CollectCoins(int value, Vector3 worldPosition)
+    public void AddIncome(int value)
     {
-        StartCoroutine(AddCoinsAfterDelay(value, 0.2f));
+        Coins += value;
+        OnChangeCoins?.Invoke(Coins);
+        _counter.DisplayWithoutAnimation();
+    }
+
+    public void CollectCoins(int value)
+    {
+        StartCoroutine(AddCoinsAfterDelay(value, 0.0f));
     }
 
     private IEnumerator AddCoinsAfterDelay(int value, float delay)

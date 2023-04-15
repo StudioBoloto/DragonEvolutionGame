@@ -16,6 +16,11 @@ public class UICounter : MonoBehaviour
         StartCoroutine(ScaleAnimation());
     }
 
+    public void DisplayWithoutAnimation()
+    {
+        _text.text = _resources.Coins.ToString();
+    }
+
     private IEnumerator ScaleAnimation()
     {
         _text.text = _resources.Coins.ToString();

@@ -9,6 +9,6 @@ public class Collectable : MonoBehaviour
     public void Collect(MoneyResources resources)
     {
         Destroy(gameObject);
-        resources.CollectCoins(1, transform.position);
+        resources.CollectCoins(1);
     }
 }
